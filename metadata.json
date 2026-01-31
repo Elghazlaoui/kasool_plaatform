@@ -1,0 +1,8 @@
+{
+  "name": "Modern Edu-Hub Material Viewer",
+  "description": "A high-end, responsive educational platform component for organizing and viewing subject materials like lessons, summaries, and videos with a focus on modern UI/UX.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
