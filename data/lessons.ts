@@ -134,7 +134,7 @@ const mapToMaterials = (prefix: string, lessons: SimpleLesson[]): Material[] => 
 
 const mathLessonData: SimpleLesson[] = [
   {
-    title: "الاتصال - Continuité",
+    title: "Continuité d'une fonction",
     pdf: "https://drive.google.com/file/d/1CnpuCRyJZZg5Gu97Yb9rr7NRI4CodlPJ/preview",        // 📄 ضع رابط PDF للدرس هنا
     summary: "https://drive.google.com/file/d/.../view",    // 📝 ضع رابط PDF للملخص هنا
     video: "https://www.youtube.com/watch?v=...",           // 🎥 ضع رابط يوتيوب هنا
@@ -143,57 +143,75 @@ const mathLessonData: SimpleLesson[] = [
     assignment: "https://drive.google.com/file/d/.../view"  // 📌 ضع رابط PDF للفرض هنا
   },
   {
-    title: "الاشتقاق - Dérivation",
+    title: "Dérivabilité d'une fonction",
     pdf: "https://drive.google.com/file/d/14rNN0x_7JWynwTEEiPEPE71CzU1DzNbg/preview",           // 👈 استبدل EXAMPLE_PDF برابطك
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",       // 👈 استبدل EXAMPLE_VIDEO برابطك
     series: EXAMPLE_PDF
   },
   {
-    title: "الدوال اللوغاريتمية - Fonctions Logarithmiques",
+    title: "Etude des fonctions",
     pdf: "https://drive.google.com/file/d/189wd1KhtdIPFJrZEFRsJMy7NDrbg-npf/preview",
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     exam: EXAMPLE_PDF
   },
   {
-    title: "الدوال الأسية - Fonctions Exponentielles",
+    title: "Limite d'une suite",
     pdf: EXAMPLE_PDF,
     video:  "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     series: EXAMPLE_PDF
   },
   {
-    title: "الأعداد العقدية - Nombres Complexes",
+    title: "Primitive",
     pdf: EXAMPLE_PDF,
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     series: EXAMPLE_PDF,
-    exam: EXAMPLE_PDF
+    exam: EXAMPLE_PDF,
   },
   {
-    title: "الحساب التكاملي - Calcul Intégral",
+    title: "Nombres complexes",
     pdf: EXAMPLE_PDF,
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
   },
   {
-    title: "المعادلات التفاضلية - Équations Différentielles",
+    title: "Fonction exponentielles",
     pdf: EXAMPLE_PDF,
     series: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
-    title: "الهندسة الفضائية - Géométrie dans l'Espace",
+    title: "Equations différentielles",
     pdf: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    exam: EXAMPLE_PDF
+    exam: EXAMPLE_PDF,
   },
   {
-    title: "الاحتمالات - Probabilités",
+    title: "Intégrales",
     pdf: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
-    assignment: EXAMPLE_PDF
-  }
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: "Produit scalaires dans l'espace",
+    pdf: EXAMPLE_PDF,
+    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    exam: EXAMPLE_PDF,
+  },
+  {
+    title: "Produit vectoriel",
+    pdf: EXAMPLE_PDF,
+    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    exam: EXAMPLE_PDF,
+  },
+  {
+    title: "Probabilités",
+    pdf: EXAMPLE_PDF,
+    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    exam: EXAMPLE_PDF,
+  },
 ];
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
