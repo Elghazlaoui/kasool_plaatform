@@ -101,22 +101,22 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
           {
             question: `ما هو الموضوع الرئيسي في درس "${lessonTitle}"؟`,
             options: [
-              'المفاهيم الأساسية',
               'التطبيقات العملية',
+              'المفاهيم الأساسية',
               'النظريات المتقدمة',
               'الأمثلة التوضيحية'
             ],
-            correctIndex: 0
+            correctIndex: 1
           },
           {
             question: 'أي من التالي يعتبر من أهم النقاط في هذا الدرس؟',
             options: [
-              'الفهم العميق للموضوع',
               'الحفظ السريع',
               'التطبيق المباشر',
-              'المراجعة المستمرة'
+              'المراجعة المستمرة',
+              'الفهم العميق للموضوع'
             ],
-            correctIndex: 0
+            correctIndex: 3
           },
           {
             question: 'ما الهدف الأساسي من دراسة هذا الدرس؟',
@@ -131,22 +131,22 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
           {
             question: 'كيف يمكن تطبيق ما تعلمته في هذا الدرس؟',
             options: [
-              'من خلال الممارسة والتطبيق',
               'بالحفظ فقط',
+              'من خلال الممارسة والتطبيق',
               'بالنسيان',
               'لا يمكن التطبيق'
             ],
-            correctIndex: 0
+            correctIndex: 1
           },
           {
             question: 'ما أفضل طريقة لمراجعة محتوى هذا الدرس؟',
             options: [
-              'المراجعة المنتظمة والتكرار',
               'قراءة واحدة فقط',
               'عدم المراجعة',
+              'المراجعة المنتظمة والتكرار',
               'الانتظار حتى الامتحان'
             ],
-            correctIndex: 0
+            correctIndex: 2
           }
         ]
       },
@@ -155,22 +155,22 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
           {
             question: `Quel est le sujet principal de la leçon "${lessonTitle}"?`,
             options: [
-              'Les concepts fondamentaux',
               'Les applications pratiques',
               'Les théories avancées',
+              'Les concepts fondamentaux',
               'Les exemples illustratifs'
             ],
-            correctIndex: 0
+            correctIndex: 2
           },
           {
             question: 'Lequel des éléments suivants est le plus important dans cette leçon?',
             options: [
-              'Une compréhension approfondie du sujet',
               'La mémorisation rapide',
               'L\'application directe',
-              'La révision continue'
+              'La révision continue',
+              'Une compréhension approfondie du sujet'
             ],
-            correctIndex: 0
+            correctIndex: 3
           },
           {
             question: 'Quel est l\'objectif principal de l\'étude de cette leçon?',
@@ -185,22 +185,22 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
           {
             question: 'Comment peut-on appliquer ce qui a été appris dans cette leçon?',
             options: [
-              'Par la pratique et l\'application',
               'Par la mémorisation uniquement',
+              'Par la pratique et l\'application',
               'En oubliant',
               'On ne peut pas l\'appliquer'
             ],
-            correctIndex: 0
+            correctIndex: 1
           },
           {
             question: 'Quelle est la meilleure façon de réviser le contenu de cette leçon?',
             options: [
-              'La révision régulière et la répétition',
               'Une seule lecture',
               'Pas de révision',
+              'La révision régulière et la répétition',
               'Attendre jusqu\'à l\'examen'
             ],
-            correctIndex: 0
+            correctIndex: 2
           }
         ]
       }

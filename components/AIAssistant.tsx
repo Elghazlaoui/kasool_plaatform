@@ -1,17 +1,136 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { X, Send, Bot, User, Sparkles, BrainCircuit, Copy, Trash2 } from 'lucide-react';
-import { GoogleGenerativeAI } from '@google/generative-ai';
+import { X, Send, Bot, User, Sparkles, BrainCircuit, Copy, Trash2, Lightbulb } from 'lucide-react';
 
 interface AIAssistantProps {
   onClose: () => void;
 }
 
+// قاعدة المعرفة المحلية
+const knowledgeBase = {
+  // الرياضيات
+  رياضيات: {
+    keywords: ['رياضيات', 'حساب', 'جبر', 'هندسة', 'تحليل', 'معادلة', 'دالة', 'مشتقة', 'تكامل', 'احتمالات'],
+    responses: [
+      'الرياضيات تحتاج للممارسة المستمرة. ابدأ بفهم المفاهيم الأساسية ثم انتقل للتمارين التطبيقية.',
+      'لحل المعادلات، حدد المجهول أولاً ثم استخدم العمليات العكسية للوصول للحل.',
+      'المشتقات تمثل معدل التغير. تذكر القواعد الأساسية: مشتقة x^n = n×x^(n-1)',
+      'في الهندسة، ارسم شكلاً توضيحياً دائماً. هذا يساعدك على فهم المسألة بشكل أفضل.'
+    ]
+  },
+  
+  // الفيزياء
+  فيزياء: {
+    keywords: ['فيزياء', 'طاقة', 'حركة', 'قوة', 'كهرباء', 'مغناطيس', 'ضوء', 'موجات', 'ميكانيكا'],
+    responses: [
+      'الفيزياء تعتمد على فهم القوانين وتطبيقها. اكتب القانون أولاً ثم عوض بالقيم المعطاة.',
+      'في مسائل الحركة، حدد المعطيات والمطلوب، ثم اختر القانون المناسب من قوانين الحركة.',
+      'الطاقة محفوظة دائماً. في أي نظام معزول، مجموع الطاقات يبقى ثابتاً.',
+      'تذكر: القوة = الكتلة × التسارع (F = ma). هذا القانون أساسي في الميكانيكا.'
+    ]
+  },
+  
+  // علوم الحياة والأرض
+  'علوم الحياة': {
+    keywords: ['بيولوجيا', 'خلية', 'وراثة', 'جينات', 'adn', 'arn', 'بروتين', 'تنفس', 'هضم', 'svt'],
+    responses: [
+      'في علوم الحياة، الفهم أهم من الحفظ. افهم العمليات البيولوجية ثم حفظ التفاصيل.',
+      'الخلية هي وحدة الحياة الأساسية. تعرف على مكوناتها ووظيفة كل عضي.',
+      'الوراثة تعتمد على DNA. تذكر: DNA → RNA → البروتين (العقيدة المركزية)',
+      'ارسم مخططات ورسومات تفصيلية. هذا يساعدك على فهم العمليات المعقدة.'
+    ]
+  },
+  
+  // الكيمياء
+  كيمياء: {
+    keywords: ['كيمياء', 'ذرة', 'جزيء', 'تفاعل', 'حمض', 'قاعدة', 'أكسدة', 'اختزال', 'ph'],
+    responses: [
+      'الكيمياء هي علم التحولات. افهم كيف تتفاعل المواد وتتحول لمواد جديدة.',
+      'في التفاعلات الكيميائية، تأكد دائماً من موازنة المعادلة قبل الحسابات.',
+      'pH يقيس حموضة المحلول: pH < 7 حمضي، pH = 7 متعادل، pH > 7 قاعدي.',
+      'تذكر: عدد مولات المادة = الكتلة ÷ الكتلة المولية'
+    ]
+  },
+  
+  // اللغة العربية
+  'اللغة العربية': {
+    keywords: ['عربي', 'نحو', 'صرف', 'بلاغة', 'أدب', 'شعر', 'نثر', 'إعراب'],
+    responses: [
+      'اللغة العربية تحتاج للقراءة الكثيرة. اقرأ نصوصاً متنوعة لتحسين مستواك.',
+      'في الإعراب، حدد نوع الكلمة أولاً (اسم/فعل/حرف) ثم موقعها في الجملة.',
+      'البلاغة تعتمد على الذوق الأدبي. تدرب على تحليل النصوص الأدبية.',
+      'حفظ الشواهد الأدبية يساعدك في الإجابة على أسئلة الامتحان.'
+    ]
+  },
+  
+  // اللغة الفرنسية
+  français: {
+    keywords: ['français', 'french', 'فرنسية', 'grammaire', 'conjugaison', 'vocabulaire'],
+    responses: [
+      'Pour améliorer ton français, lis beaucoup et pratique régulièrement l\'écriture.',
+      'La conjugaison est essentielle. Maîtrise les temps: présent, passé composé, imparfait, futur.',
+      'Enrichis ton vocabulaire en lisant des textes variés et en notant les nouveaux mots.',
+      'La grammaire française a des règles précises. Apprends-les progressivement et pratique avec des exercices.'
+    ]
+  },
+  
+  // الفلسفة
+  فلسفة: {
+    keywords: ['فلسفة', 'منطق', 'وعي', 'معرفة', 'أخلاق', 'سياسة', 'ديكارت', 'أرسطو'],
+    responses: [
+      'الفلسفة تعتمد على التفكير النقدي. اقرأ النصوص بعناية وحلل الأفكار.',
+      'في المقالة الفلسفية: مقدمة (إشكالية) → عرض (تحليل) → خاتمة (تركيب).',
+      'افهم المفاهيم الأساسية وتعرف على الفلاسفة وأفكارهم الرئيسية.',
+      'التدرب على كتابة المقالات الفلسفية أساسي للنجاح في الامتحان.'
+    ]
+  },
+  
+  // نصائح عامة للدراسة
+  دراسة: {
+    keywords: ['دراسة', 'مراجعة', 'امتحان', 'باك', 'بكالوريا', 'حفظ', 'تركيز', 'تنظيم'],
+    responses: [
+      'نظم وقتك جيداً. اصنع جدولاً للمراجعة يشمل جميع المواد.',
+      'خذ فترات راحة منتظمة (تقنية البومودورو: 25 دقيقة عمل + 5 دقائق راحة).',
+      'اختبر نفسك باستمرار. حل تمارين وامتحانات السنوات السابقة.',
+      'نم جيداً وتغذى بشكل صحي. الصحة الجسدية تؤثر على الأداء الدراسي.',
+      'لا تؤجل المراجعة للحظة الأخيرة. المراجعة المبكرة والمنتظمة أفضل.',
+      'اشرح ما تعلمته لشخص آخر. هذه أفضل طريقة للتأكد من فهمك.'
+    ]
+  },
+  
+  // التحفيز
+  تحفيز: {
+    keywords: ['تحفيز', 'ملل', 'تعب', 'يأس', 'صعب', 'مستحيل', 'فشل'],
+    responses: [
+      'النجاح يحتاج للصبر والمثابرة. كل مجهود تبذله اليوم سيؤتي ثماره غداً! 💪',
+      'تذكر هدفك ولماذا بدأت. التحفيز يأتي من الداخل.',
+      'الفشل جزء من التعلم. لا تستسلم، حاول مرة أخرى بطريقة مختلفة.',
+      'أنت قادر على النجاح! آمن بنفسك وبقدراتك. 🌟',
+      'خذ استراحة عندما تشعر بالتعب، ثم عد بطاقة جديدة.',
+      'تحدث مع أصدقائك أو عائلتك عندما تشعر بالضغط. المشاركة تخفف العبء.'
+    ]
+  }
+};
+
+// أسئلة سريعة مقترحة
+const quickQuestions = [
+  'كيف أحسن من مستواي في الرياضيات؟',
+  'ما هي أفضل طريقة للمراجعة؟',
+  'كيف أتعامل مع ضغط الامتحانات؟',
+  'نصائح لحل تمارين الفيزياء',
+  'كيف أنظم وقتي للدراسة؟'
+];
+
 const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
   const [messages, setMessages] = useState<{ role: 'user' | 'assistant', content: string, time?: string }[]>([
-    { role: 'assistant', content: 'مرحباً! أنا مساعدك التعليمي الذكي. كيف يمكنني مساعدتك اليوم في التحضير للامتحانات؟', time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) }
+    { 
+      role: 'assistant', 
+      content: 'مرحباً! 👋 أنا مساعدك التعليمي الذكي. يمكنني مساعدتك في:\n\n📚 جميع المواد الدراسية\n💡 نصائح للمراجعة\n⏰ تنظيم الوقت\n🎯 التحضير للامتحانات\n\nكيف يمكنني مساعدتك اليوم؟', 
+      time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) 
+    }
   ]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [showSuggestions, setShowSuggestions] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -23,45 +142,55 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
     setTimeout(() => inputRef.current?.focus(), 300);
   }, []);
 
-  const handleSend = async () => {
-    if (!input.trim() || isTyping) return;
+  // دالة للعثور على أفضل إجابة
+  const findBestResponse = (question: string): string => {
+    const lowerQuestion = question.toLowerCase();
+    
+    // البحث في قاعدة المعرفة
+    for (const [category, data] of Object.entries(knowledgeBase)) {
+      const matchedKeyword = data.keywords.find(keyword => 
+        lowerQuestion.includes(keyword.toLowerCase())
+      );
+      
+      if (matchedKeyword) {
+        // اختيار إجابة عشوائية من الإجابات المتاحة
+        const randomIndex = Math.floor(Math.random() * data.responses.length);
+        return data.responses[randomIndex];
+      }
+    }
+    
+    // إجابات افتراضية للأسئلة العامة
+    const generalResponses = [
+      'هذا سؤال مهم! حاول تقسيمه لأجزاء صغيرة والبحث عن كل جزء على حدة.',
+      'يمكنك مراجعة الكتاب المدرسي أو سؤال أستاذك للحصول على إجابة أكثر تفصيلاً.',
+      'هذا الموضوع يحتاج لمزيد من التوضيح. حاول البحث في المراجع أو سؤال زملائك.',
+      'للإجابة على هذا السؤال بشكل أفضل، حدد المادة أو الموضوع الذي تسأل عنه.',
+      'سؤال جيد! ركز على فهم المفاهيم الأساسية أولاً ثم انتقل للتفاصيل.'
+    ];
+    
+    return generalResponses[Math.floor(Math.random() * generalResponses.length)];
+  };
 
-    const userMsg = input.trim();
+  const handleSend = async (messageText?: string) => {
+    const userMsg = messageText || input.trim();
+    if (!userMsg || isTyping) return;
+
     const now = new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' });
     setInput('');
+    setShowSuggestions(false);
     setMessages(prev => [...prev, { role: 'user', content: userMsg, time: now }]);
     setIsTyping(true);
 
-    try {
-      const apiKey = process.env.GEMINI_API_KEY;
-      if (!apiKey) {
-        setMessages(prev => [...prev, { role: 'assistant', content: '⚠️ لم يتم تحديد مفتاح API. تأكد من إنشاء ملف .env.local وإضافة GEMINI_API_KEY فيه.', time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) }]);
-        setIsTyping(false);
-        return;
-      }
-
-      const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({
-        model: 'gemini-1.5-flash',
-        systemInstruction: 'أنت مساعد تعليمي متخصص في مساعدة طلاب البكالوريا في المغرب. كن مشجعاً، واضحاً، ومختصراً. قدم شروحات مبسطة للمفاهيم العلمية والرياضية. أجب دائماً باللغة العربية إلا إذا طلب المستخدم غير ذلك.'
-      });
-
-      // Build conversation history for context
-      const history = messages.slice(-6).map(m => ({
-        role: m.role === 'assistant' ? 'model' as const : 'user' as const,
-        parts: [{ text: m.content }]
-      }));
-
-      const chat = model.startChat({ history });
-      const response = await chat.sendMessage(userMsg);
-      const text = response.text || 'عذراً، حدث خطأ ما. يرجى المحاولة مرة أخرى.';
-      setMessages(prev => [...prev, { role: 'assistant', content: text, time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) }]);
-    } catch (error) {
-      console.error('Gemini error:', error);
-      setMessages(prev => [...prev, { role: 'assistant', content: 'عذراً، واجهت مشكلة في الاتصال. تأكد من صحة مفتاح API والإنترنت.', time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) }]);
-    } finally {
+    // محاكاة التفكير
+    setTimeout(() => {
+      const response = findBestResponse(userMsg);
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: response, 
+        time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) 
+      }]);
       setIsTyping(false);
-    }
+    }, 800 + Math.random() * 1200); // وقت عشوائي بين 0.8 - 2 ثانية
   };
 
   const copyMessage = (text: string) => {
@@ -69,7 +198,12 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
   };
 
   const clearChat = () => {
-    setMessages([{ role: 'assistant', content: 'مرحباً! أنا مساعدك التعليمي الذكي. كيف يمكنني مساعدتك اليوم في التحضير للامتحانات؟', time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) }]);
+    setMessages([{ 
+      role: 'assistant', 
+      content: 'مرحباً! 👋 أنا مساعدك التعليمي الذكي. يمكنني مساعدتك في:\n\n📚 جميع المواد الدراسية\n💡 نصائح للمراجعة\n⏰ تنظيم الوقت\n🎯 التحضير للامتحانات\n\nكيف يمكنني مساعدتك اليوم؟', 
+      time: new Date().toLocaleTimeString('ar-MA', { hour:'2-digit', minute:'2-digit' }) 
+    }]);
+    setShowSuggestions(true);
   };
 
   return (
@@ -81,10 +215,10 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
             <BrainCircuit size={22} />
           </div>
           <div>
-            <h3 className="font-black text-lg">مساعد إيدو الذكي</h3>
+            <h3 className="font-black text-lg">مساعد كسول الذكي</h3>
             <div className="flex items-center gap-1.5 opacity-80">
                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-               <span className="text-[10px] font-bold uppercase tracking-wider">مدعوم بـ Gemini</span>
+               <span className="text-[10px] font-bold uppercase tracking-wider">متصل</span>
             </div>
           </div>
         </div>
@@ -107,7 +241,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
                 {msg.role === 'user' ? <User size={14} /> : <Bot size={14} />}
               </div>
               <div className="flex flex-col">
-                <div className={`p-3.5 rounded-2xl text-sm leading-relaxed shadow-sm ${msg.role === 'user' ? 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tr-none' : 'bg-indigo-50 dark:bg-indigo-900/30 text-slate-900 dark:text-slate-100 border border-indigo-100/50 dark:border-indigo-900/50 rounded-tl-none'}`}>
+                <div className={`p-3.5 rounded-2xl text-sm leading-relaxed shadow-sm whitespace-pre-line ${msg.role === 'user' ? 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 rounded-tr-none' : 'bg-indigo-50 dark:bg-indigo-900/30 text-slate-900 dark:text-slate-100 border border-indigo-100/50 dark:border-indigo-900/50 rounded-tl-none'}`}>
                   {msg.content}
                 </div>
                 <div className={`flex items-center gap-2 mt-1 ${msg.role === 'user' ? 'flex-row' : 'flex-row-reverse'}`}>
@@ -122,6 +256,26 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
             </div>
           </div>
         ))}
+        
+        {/* Quick suggestions */}
+        {showSuggestions && messages.length === 1 && (
+          <div className="space-y-2 mt-4">
+            <div className="flex items-center gap-2 text-xs text-slate-500 font-bold">
+              <Lightbulb size={14} className="text-amber-500" />
+              <span>أسئلة سريعة:</span>
+            </div>
+            {quickQuestions.map((q, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleSend(q)}
+                className="w-full text-right p-3 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 border border-slate-200 dark:border-slate-700 rounded-xl text-xs text-slate-700 dark:text-slate-300 transition-all"
+              >
+                {q}
+              </button>
+            ))}
+          </div>
+        )}
+        
         {isTyping && (
           <div className="flex justify-end">
             <div className="flex gap-2.5 flex-row-reverse">
@@ -151,7 +305,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
             className="w-full pr-4 pl-14 py-3.5 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 focus:border-indigo-600 rounded-2xl outline-none shadow-sm transition-all dark:text-white text-sm"
           />
           <button
-            onClick={handleSend}
+            onClick={() => handleSend()}
             disabled={!input.trim() || isTyping}
             className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-indigo-600 text-white rounded-xl flex items-center justify-center shadow-lg shadow-indigo-200 dark:shadow-none hover:bg-indigo-700 disabled:opacity-40 transition-all active:scale-90"
           >
@@ -160,7 +314,7 @@ const AIAssistant: React.FC<AIAssistantProps> = ({ onClose }) => {
         </div>
         <p className="text-[9px] text-center mt-2.5 text-slate-400 uppercase tracking-widest flex items-center justify-center gap-1.5">
            <Sparkles size={9} className="text-amber-400" />
-           التزم بآداب الحوار لتحصل على أفضل إجابة
+           مساعد محلي ذكي - يعمل بدون اتصال بالإنترنت
         </p>
       </div>
 
