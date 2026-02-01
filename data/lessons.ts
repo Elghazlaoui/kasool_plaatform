@@ -228,51 +228,249 @@ const mathLessonData: SimpleLesson[] = [
 
 const physiqueLessonData: SimpleLesson[] = [
   {
-    title: "الموجات الميكانيكية - Ondes Mécaniques",
-    pdf: EXAMPLE_PDF,
+    title: "Ondes progressives",
+    pdf: "https://drive.google.com/file/d/1E6udRHky2p7PGyUdrzW93LPtDNv0f8kK/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     series: EXAMPLE_PDF,
-    exam: EXAMPLE_PDF
+    assignment: EXAMPLE_PDF,
   },
   {
-    title: "انتشار موجة ضوئية - Propagation d'une Onde Lumineuse",
-    pdf: EXAMPLE_PDF,
+    title: "Ondes périodiques",
+    pdf: "https://drive.google.com/file/d/1e6k2SDjUXIArcoFrbbYdc6O5umNWgKE_/preview",
     summary: EXAMPLE_PDF,
-    assignment: EXAMPLE_PDF
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
   },
   {
-    title: "ثنائي القطب RC - Dipôle RC",
-    pdf: EXAMPLE_PDF,
+    title: " Propagation d'une onde lumineuse",
+    pdf: "https://drive.google.com/file/d/1M8EKBiY95xzmqgexHC0hVH5Ki2cRpW4Z/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: " Décroissance radioactive",
+    pdf: "https://drive.google.com/file/d/1hhnySETCQhVknCYfzmJymPrKp2X7e0LV/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: "Noyau , énergie et masse",
+    pdf: "https://drive.google.com/file/d/1jPgwF2ygzS8H7broatopB3da3z9tNjeI/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: " Dipôle RC",
+    pdf: "https://drive.google.com/file/d/1sVJ4hq6K_k-iGfiTCHZ4Jxa6T3kyQglR/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: "Dipôle RL",
+    pdf: "https://drive.google.com/file/d/1Ur2a4xqnBwGd5sVhUmnnAVzqD5Jvzsz2/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: " Oscillation libre dans RLC en série",
+    pdf: "https://drive.google.com/file/d/16J4MvcozgmefRSZ3aYwH171vh_6w4PAS/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: " Circuit (R,L,C)en série en régime forcé",
+    pdf: "https://drive.google.com/file/d/1x_rshgMXQF7eMzYahgpsIbBWIgf1-4En/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: " Ondes électromagnétique",
+    pdf: "https://drive.google.com/file/d/15Xg5UGuprLdRzV6-8Vynu_ckBsYmwRK7/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: " Modulation d'amplitude",
+    pdf: "https://drive.google.com/file/d/1qIqtkW33bW13ke3PBcbfLNC_-3-kaxis/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: "les lois de Newton",
+    pdf: "https://drive.google.com/file/d/1tW8iisqzfwowyt99gUxGrtnH9WtsdA4f/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: "La chute verticale d’un solide",
+    pdf: "https://drive.google.com/file/d/1B_hkmDrHZZD8EVH2P5Lmfjqv7dtiVnKS/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: "Les mouvements plans",
+    pdf: "https://drive.google.com/file/d/1coTzJgRNSxQuIFm-SEkvFgxs8omlBcr0/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: " Mouvement des satellites et des planètes",
+    pdf: "https://drive.google.com/file/d/1TJzUoF45Zz1SIGkXNZkBczYLFCWkxN2Q/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+    {
+    title: " Mouvement de rotation d’un solide autour d’un axe fixe",
+    pdf: "https://drive.google.com/file/d/1CUWnKbFPcjT5FLJRdIzfuAYTfzP9_TAv/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+      {
+    title: "Système mécanique oscillant",
+    pdf: "https://drive.google.com/file/d/1MUYpkhjAnd_LdCU8eFY9roOY2vE7IgbP/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+      {
+    title: "Aspects énergétiques",
+    pdf: "https://drive.google.com/file/d/1J1iWRtRZaFigoadHRvjeUAdF0NIxwI_r/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+      {
+    title: "L’atome et la mécanique de Newton",
+    pdf: "https://drive.google.com/file/d/1c8PRxtrh2KImaqlOwBjSuQHQ9BUhUvi4/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🧬                      chimie
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      {
+    title: "Transformations lentes et rapides",
+    pdf: "https://drive.google.com/file/d/19r8N3GFRsK1dQdDbG1onejkzrDNjavPt/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF
   },
-  {
-    title: "ثنائي القطب RL - Dipôle RL",
-    pdf: EXAMPLE_PDF,
-    video: EXAMPLE_VIDEO,
-    series: EXAMPLE_PDF
-  },
-  {
-    title: "التحولات النووية - Transformations Nucléaires",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF,
-    exam: EXAMPLE_PDF
-  },
-  {
-    title: "الميكانيك: قوانين نيوتن - Mécanique: Lois de Newton",
-    pdf: EXAMPLE_PDF,
+        {
+    title: "Suivi temporel d’une transformation - Vitesse de réaction",
+    pdf: "https://drive.google.com/file/d/14DcLN_VeTv9Y4UrLEiLDnrqDDxAoNA03/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
-    series: EXAMPLE_PDF
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
   },
-  {
-    title: "الأعمدة والتحليل الكهربائي - Piles et Électrolyse",
-    pdf: EXAMPLE_PDF,
-    series: EXAMPLE_PDF
-  }
+        {
+    title: "Transformations chimique qui s’effectuent en deux sens",
+    pdf: "https://drive.google.com/file/d/1ROeIqaidNapNymOv8YsZpTIEgr7xHxcH/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Etat d'équilibre d'un système chimique",
+    pdf: "https://drive.google.com/file/d/1k8aSc9OoaOKh9hTjmKZCzywRsYrmpP6F/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Transformation liée à des réactions acides et bases",
+    pdf: "https://drive.google.com/file/d/1jLl_inihheT42tLubBUCu4llB4SbjOxz/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Dosage acido-basique",
+    pdf: "https://drive.google.com/file/d/1Y-AT7whmbKuZr8-7uSaTZ328kmAJAUDT/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Evolution spontanée d'un système chimique",
+    pdf: "https://drive.google.com/file/d/1aGU38azATzQlOPebzDtQNr_4b7TaAuLg/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Transformation Spontanées dans les piles et production d'énergie",
+    pdf: "https://drive.google.com/file/d/1cQV0YcJ9K_tBkQWlxZRwOpC8pjCuadpp/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Transformations forcées - L'électrolyse",
+    pdf: "https://drive.google.com/file/d/1VmKkM-7GeLHozkteNS5SeZb2lDLIISqy/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+        {
+    title: "Réactions d'estérification et d'hydrolyseContrôle de l'évolution d'un système chimique",
+    pdf: "https://drive.google.com/file/d/1pz3Wfdoi1xlftvHC84JguAAP3dd6P4bB/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
+          {
+    title: "Contrôle de l'évolution d'un système chimique",
+    pdf: "https://drive.google.com/file/d/1H80wJW7aGhVVG3brxYaR3nGLKxky36LX/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF
+  },
 ];
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
