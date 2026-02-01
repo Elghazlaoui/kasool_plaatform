@@ -108,7 +108,7 @@ export default function App() {
   }, []);
 
   const daysLeft = useMemo(() => {
-    const examDate = new Date('2026-06-08T00:00:00');
+    const examDate = new Date('2026-06-04T00:00:00');
     const today = new Date();
     const diffTime = examDate.getTime() - today.getTime();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

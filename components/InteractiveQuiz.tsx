@@ -29,34 +29,48 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
     }
   }, [isFinished, onComplete]);
 
+  // ─── توليد الاختبار عبر Gemini ────────────────────────────────────────────
   const generateAIQuiz = async () => {
     setIsGenerating(true);
     setGenerateError(null);
+
     try {
-      const apiKey = process.env.GEMINI_API_KEY;
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+
       if (!apiKey) {
-        setGenerateError('⚠️ مفتاح API غير متوفر. أنشئ ملف .env.local وأضف فيه GEMINI_API_KEY.');
+        setGenerateError('⚠️ مفتاح API غير متوفر. أنشئ ملف .env.local وأضف فيه VITE_GEMINI_API_KEY.');
         setIsGenerating(false);
         return;
       }
 
       const genAI = new GoogleGenerativeAI(apiKey);
-      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const model = genAI.getGenerativeModel({
+        model: 'gemini-2.0-flash',
+        generationConfig: {
+          responseMimeType: 'application/json', // يجبر Gemini يرجع JSON نظيف بدون markdown
+        },
+      });
 
       const prompt = `قم بتوليد اختبار اختيار من متعدد مكون من 5 أسئلة حول الدرس: "${lessonTitle}".
 يجب أن تكون الأسئلة باللغة ${lang === 'ar' ? 'العربية' : 'الفرنسية'}.
-أرجع النتيجة بتنسيق JSON فقط بهذا الشكل بالضبط، بدون أي نص إضافي:
-{"questions":[{"question":"السؤال","options":["خيار1","خيار2","خيار3","خيار4"],"correctIndex":0},{"question":"السؤال2","options":["خيار1","خيار2","خيار3","خيار4"],"correctIndex":1}]}`;
+أرجع النتيجة بتنسيق JSON فقط بهذا الشكل بالضبط:
+{"questions":[{"question":"السؤال","options":["خيار1","خيار2","خيار3","خيار4"],"correctIndex":0}]}
+الشروط:
+- كل سؤال له بالضبط 4 خيارات
+- correctIndex يشير للخيار الصحيح (0 أو 1 أو 2 أو 3)
+- الأسئلة يجب أن تكون متنوعة وذات صلة بالدرس`;
 
-      const response = await model.generateContent(prompt);
-      const rawText = response.text?.trim() || '';
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const rawText = response.text();
 
-      // Extract JSON from response (strip markdown fences if present)
-      let jsonText = rawText;
-      const match = rawText.match(/```(?:json)?\s*([\s\S]*?)```/);
+      // إزالة علامات الـ Markdown لو وجدت احتياطياً
+      let jsonText = rawText.trim();
+      const match = jsonText.match(/```(?:json)?\s*([\s\S]*?)```/);
       if (match) jsonText = match[1].trim();
 
       const parsed = JSON.parse(jsonText);
+
       if (parsed.questions && Array.isArray(parsed.questions) && parsed.questions.length > 0) {
         setQuiz(parsed);
       } else {
@@ -70,6 +84,7 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
     }
   };
 
+  // ─── السلوك الباقي كما هو ─────────────────────────────────────────────────
   const handleOptionSelect = (index: number) => {
     if (selectedOption !== null) return;
     setSelectedOption(index);
@@ -98,7 +113,7 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
     setIsFinished(false);
   };
 
-  // --- LOADING STATE ---
+  // ─── حالة: جاري التوليد ──────────────────────────────────────────────────
   if (isGenerating) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[400px] h-full space-y-4 text-center p-6">
@@ -112,7 +127,7 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
     );
   }
 
-  // --- NO QUIZ (prompt to generate) ---
+  // ─── حالة: لا يوجد اختبار بعد ────────────────────────────────────────────
   if (!quiz) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[400px] h-full space-y-6 text-center p-6">
@@ -139,7 +154,7 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
     );
   }
 
-  // --- FINISHED STATE ---
+  // ─── حالة: انتهى الاختبار ────────────────────────────────────────────────
   if (isFinished) {
     const percentage = Math.round((score / quiz.questions.length) * 100);
     return (
@@ -170,12 +185,11 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
     );
   }
 
-  // --- QUIZ IN PROGRESS ---
+  // ─── حالة: سؤال فعلي ─────────────────────────────────────────────────────
   const question = quiz.questions[currentQuestion];
 
   return (
     <div className="h-full flex flex-col p-4 sm:p-8 max-w-2xl mx-auto w-full" style={{ animation: 'fadeIn 0.4s ease' }}>
-      {/* Progress bar */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-3">
           <span className="w-8 h-8 md:w-10 md:h-10 bg-indigo-600 text-white rounded-lg md:rounded-xl flex items-center justify-center font-black text-sm">{currentQuestion + 1}</span>
@@ -189,12 +203,10 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
         <span className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">{currentQuestion + 1} / {quiz.questions.length}</span>
       </div>
 
-      {/* Question text */}
       <h3 className="text-base sm:text-xl font-black text-slate-800 dark:text-white mb-5 leading-snug text-center sm:text-right">
         {question.question}
       </h3>
 
-      {/* Options */}
       <div className="space-y-3 flex-1 overflow-y-auto no-scrollbar pb-4">
         {question.options.map((option, idx) => {
           const isCorrect = idx === question.correctIndex;
@@ -224,7 +236,6 @@ const InteractiveQuiz: React.FC<InteractiveQuizProps> = ({ quiz: initialQuiz, le
         })}
       </div>
 
-      {/* Next / Finish button */}
       {showResult && (
         <div className="mt-4 pb-2">
           <button
