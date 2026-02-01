@@ -281,37 +281,95 @@ const physiqueLessonData: SimpleLesson[] = [
 
 const svtLessonData: SimpleLesson[] = [
   {
-    title: "استهلاك المادة العضوية - Consommation de la Matière Organique",
-    pdf: EXAMPLE_PDF,
+    title: "Libération de l’énergie emmagasinée dans la matière organique",
+    pdf: "https://drive.google.com/file/d/16exg7nGclihVECbEv7WASpbBSoxuD5sx/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
-    series: EXAMPLE_PDF
-  },
-  {
-    title: "الخبر الوراثي - L'information Génétique",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF,
-    video: EXAMPLE_VIDEO,
-    exam: EXAMPLE_PDF
-  },
-  {
-    title: "القوانين الإحصائية - Lois Statistiques",
-    pdf: EXAMPLE_PDF,
     series: EXAMPLE_PDF,
-    assignment: EXAMPLE_PDF
   },
   {
-    title: "المناعة - Immunologie",
-    pdf: EXAMPLE_PDF,
+    title: "Rôle du muscle squelettique strié dans la conversion de l’énergie",
+    pdf: "https://drive.google.com/file/d/10aD9POel11V30pKXENfH8ycLj4ruRCE8/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
-    exam: EXAMPLE_PDF
+    exam: EXAMPLE_PDF,
   },
   {
-    title: "الجيولوجيا - Géologie",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF
-  }
+    title: "Nature de l’information génétique",
+    pdf: "https://drive.google.com/file/d/1BXJEGkMikrqVLCjFybKQZlbgN77_IDpW/preview",
+    series: EXAMPLE_PDF,
+    assignment: EXAMPLE_PDF,
+  },
+  {
+    title: "Expression de l’information génétique",
+    pdf: "https://drive.google.com/file/d/17diYPiaHk7XwMwqZgl4dryNnpkWcAd5j/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    exam: EXAMPLE_PDF,
+  },
+  {
+    title: "Transfert de l’information génétique au cours de la reproduction sexuée",
+     pdf: "https://drive.google.com/file/d/15tlsNL9wdP51nHQDfl_kaFxenWRcU6qW/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+    {
+    title: "Les lois statistiques de la transmission des caractères héréditaires chez les diploïdes",
+    pdf: "https://drive.google.com/file/d/1kiWDFvwDtN6Wd-dOYJDhkDXRmWQXyXcl/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+    {
+    title: "Les déchets ménagers issus de l’utilisation des matières organiques et inorganiques",
+    pdf: "https://drive.google.com/file/d/1q30BtocLeLo53GRF2q-M8l7p4yBzbvvQ/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+    {
+    title: "Les pollutions issues de la consommation des produits énergétiques, de l’utilisation de la matière organique et inorganique dans les industries chimiques, alimentaires et minérales",
+    pdf: "https://drive.google.com/file/d/1Wwdyh1GfFNz8TubROq8YxoSu63RGcJpk/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+    {
+    title: "Les matières radioactives et l’énergie nucléaire",
+    pdf: "https://drive.google.com/file/d/159WP9ZibABrqKYDklSuMgGElxSS15Ae_/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+    {
+    title: "Contrôle de la qualité et de la salubrité des milieux naturels",
+    pdf: "https://drive.google.com/file/d/1W854RZS3qB5BMQ7svWsOaXNkXBZktQtz/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+  {
+    title: "Les chaînes de montagnes récentes et leurs relations avec la tectonique des plaque",
+    pdf: "https://drive.google.com/file/d/1ocjdY99MiGbTeYF8vpl-MHpqXhZpKAqG/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+  {
+    title: "Le métamorphisme et sa relation avec la tectonique des plaques",
+    pdf: "https://drive.google.com/file/d/1JrauzoT-MitBIRToNtv7D1tyqlOOimyz/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
+  {
+    title: "La granitisation et sa relation avec le métamorphisme",
+    pdf: "https://drive.google.com/file/d/1nRIeguBFY6bFZ9o6mGHCsQyhWOGK9_cJ/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF,
+  },
 ];
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
