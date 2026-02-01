@@ -144,27 +144,27 @@ const mathLessonData: SimpleLesson[] = [
   },
   {
     title: "Dérivabilité d'une fonction",
-    pdf: "https://drive.google.com/file/d/14rNN0x_7JWynwTEEiPEPE71CzU1DzNbg/preview",           // 👈 استبدل EXAMPLE_PDF برابطك
+    pdf: "https://drive.google.com/file/d/1LgSgEawVDDCg-XPnh0Ogiu-_W_j2Mbzn/preview",           // 👈 استبدل EXAMPLE_PDF برابطك
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",       // 👈 استبدل EXAMPLE_VIDEO برابطك
     series: EXAMPLE_PDF
   },
   {
     title: "Etude des fonctions",
-    pdf: "https://drive.google.com/file/d/189wd1KhtdIPFJrZEFRsJMy7NDrbg-npf/preview",
+    pdf: "https://drive.google.com/file/d/1wDHZo2XbRQ0jFvx4ko7AA2wIJtuPoIP8/preview",
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     exam: EXAMPLE_PDF
   },
   {
     title: "Limite d'une suite",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1HkEh83Ir40QLWGEsTU3t2kYv8dUgII9I/preview",
     video:  "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     series: EXAMPLE_PDF
   },
   {
     title: "Primitive",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1NMIqFbSiUY_AnvqmrELOV79Hxx6vyfa3/preview",
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     series: EXAMPLE_PDF,
