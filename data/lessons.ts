@@ -480,10 +480,12 @@ const physiqueLessonData: SimpleLesson[] = [
 const svtLessonData: SimpleLesson[] = [
   {
     title: "Libération de l’énergie emmagasinée dans la matière organique",
+    examTitle: "watani watani watani l4ali",
     pdf: "https://drive.google.com/file/d/16exg7nGclihVECbEv7WASpbBSoxuD5sx/preview",
     summary: EXAMPLE_PDF,
     video: "https://www.youtube.com/watch?v=05J1AbgGiQU",
     series: EXAMPLE_PDF,
+    exam: EXAMPLE_PDF,
   },
   {
     title: "Rôle du muscle squelettique strié dans la conversion de l’énergie",
@@ -516,7 +518,7 @@ const svtLessonData: SimpleLesson[] = [
     title: "Les lois statistiques de la transmission des caractères héréditaires chez les diploïdes",
     pdf: "https://drive.google.com/file/d/1kiWDFvwDtN6Wd-dOYJDhkDXRmWQXyXcl/preview",
     summary: EXAMPLE_PDF,
-    video: "https://www.youtube.com/watch?v=BIqN709LlvQ&list=PLYZ4x9Kvxh7a7njnnOI6Jt4D5vY2yLt6L",
+    video: "https://www.youtube.com/watch?v=ucKSbDh83nA",
     series: EXAMPLE_PDF,
   },
     {
@@ -622,40 +624,203 @@ const frenchLessonData: SimpleLesson[] = [
 
 const philoLessonData: SimpleLesson[] = [
   {
-    title: "مفهوم الشخص - La Personne",
+    title: "الشخص والهوية",
     pdf: EXAMPLE_PDF,
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
-    title: "مفهوم الغير - Autrui",
+    title: "الشخص بوصفه قيمة",
     pdf: EXAMPLE_PDF,
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     exam: EXAMPLE_PDF
   },
   {
-    title: "النظرية والتجريب - Théorie et Expérience",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF
+    title: "الشخص بين ضرورة و الحرية",
+     pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
   },
   {
-    title: "الحقيقة - La Vérité",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF
+    title: "وجود الغير",
+     pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
   },
   {
-    title: "الدولة - L'État",
+    title: "معرفة الغير",
     pdf: EXAMPLE_PDF,
     summary: EXAMPLE_PDF,
-    exam: EXAMPLE_PDF
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
   },
   {
-    title: "الحق والعدالة - Le Droit et la Justice",
+    title: "العلاقة مع الغير",
     pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF
-  }
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+  {
+    title: "التجربة و التجريب",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+    {
+    title: "العقلانية العلمية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+  {
+    title: "معايير العلمية نضرية العلمية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+  {
+    title: "الحقيقة و الرأي",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "معايير الحقيقية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الحقيقة بوصفها قيمة",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "معايير العلمية نضرية العلمية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الحقيقة و الرأي",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "معايير الحقيقية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الحقيقة بوصفها قيمة",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "مشروعية دولة و غاياتها",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "طبيعة سلطة سياسية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الدولة بين الحق و العنف",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الحق بين طبيعي و الوضعي ",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "العدالة كأساس للحق",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "العدالة بين المساوات و الانصاف ",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الواجب و الاكراه",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الوعي الاخلاقي ",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الواجب والمجتمع",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: " الحرية و الحتمية",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+      {
+    title: "الحرية و الارادة",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+  {
+    title: "الحرية و القانون",
+    pdf: EXAMPLE_PDF,
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    assignment: EXAMPLE_PDF
+  },
+
+
 ];
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -740,36 +905,370 @@ const arabicLessonData: SimpleLesson[] = [
 
 const englishLessonData: SimpleLesson[] = [
   {
-    title: "Unit 1: Cultural Issues",
-    pdf: EXAMPLE_PDF,
+    title: "Vocabulary: Gifts of Youth, Talents & Qualities",
+    pdf: "https://drive.google.com/file/d/1BKFlwlSiIHp8wYW-XChQpQIuzqtbiT3k/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     series: EXAMPLE_PDF
   },
   {
-    title: "Unit 2: Gifts of Youth",
-    pdf: EXAMPLE_PDF,
+    title: "Function: Expressing Opinion",
+    pdf: "https://drive.google.com/file/d/1gTx32-jHWU7yCYQeQDmn8k0Ha6T0fVvz/preview",
     summary: EXAMPLE_PDF,
-    video: EXAMPLE_VIDEO
-  },
-  {
-    title: "Unit 3: Education",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF,
-    exam: EXAMPLE_PDF
-  },
-  {
-    title: "Grammar: Tenses",
-    pdf: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
-    series: EXAMPLE_PDF,
-    assignment: EXAMPLE_PDF
+    series: EXAMPLE_PDF
   },
   {
-    title: "Writing: Email & Letter",
-    pdf: EXAMPLE_PDF,
-    summary: EXAMPLE_PDF
-  }
+    title: "Grammar: Infinitive or Gerund",
+    pdf: "https://drive.google.com/file/d/1wn5Pxee2UZ4_y9jKD7CUeo9vdddDv3YS/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+  {
+    title: "Vocabulary: Humor",
+    pdf: "https://drive.google.com/file/d/1SiBYTcG_PYxym8oT1w33DUPJQ3D682Dl/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+  {
+    title: "Function: Making Requests",
+    pdf: "https://drive.google.com/file/d/1rK80-CJcDqDMC6DNrJGMv0DXpkaEVK6V/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Grammar: Present Modals & Past Modals",
+    pdf: "https://drive.google.com/file/d/1nYeLx3r6Jvnt_XDH_CEbPo081zBej2SP/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Reading Comprehension: Humor",
+    pdf: "https://drive.google.com/file/d/1MQSv38_w-h-MmzR_23Fc3tGSAItCcWSE/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Writing: The Narrative Paragraph",
+    pdf: "https://drive.google.com/file/d/1KZRMD8Bis5V5H8wyY7M0TkMm64ZRbrKL/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Vocabulary: Education Collocations",
+    pdf: "https://drive.google.com/file/d/1tQeHgSQgG24U-3pTohJpOVLkjjif5QI9/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Function: Expresssing Purpose",
+    pdf: "https://drive.google.com/file/d/1GLugUYZTnQIKxufm3QZI2yvipbFifx0p/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Grammar: The Past Perfect Tense",
+    pdf: "https://drive.google.com/file/d/10-84mMi_jkAtltXDXhafyIEE8kNoW4j7/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Reading Comprehension: Education",
+    pdf: "https://drive.google.com/file/d/1Vvs29mv_cuLFR3L3gIhSf8S9k5OEFmXo/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Writing: A Report about an Event",
+    pdf: "https://drive.google.com/file/d/1veddr5e969RbsH-yA6zjFBHWIomaD7Ql/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Vocabulary: Sustainable Development Collocations",
+    pdf: "https://drive.google.com/file/d/1-K7VGy57LcSYvoY8rRHPHUBLl5sMMMau/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Function: Expressing Cause and Effect",
+    pdf: "https://drive.google.com/file/d/1l3xTkTpOdm1LLTNQVsVUZmx0PLbaKsih/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Grammar: The Future Perfect Tense",
+    pdf: "https://drive.google.com/file/d/1luGvx3leQA1MKF3ocF_LypFcPoVLzhfv/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Reading Comprehension: Sustainablep; Development",
+    pdf: "https://drive.google.com/file/d/1cweVhrOPmwzq8DiLGUYc02Yii5m_NT-7/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Writing: The Formal Letter",
+    pdf: "https://drive.google.com/file/d/1BAUWIyzdC3kd6b0vXfeu_9b4SsJUuoZ8/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Vocabulary: Women's Rights",
+    pdf: "https://drive.google.com/file/d/1r0XETPt5-BjZwxjJ922-cybDZoc7CpAU/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Word Formation: Suffixes (-ation; -ment; -ance; -ence; -ism; -ity)",
+    pdf: "https://drive.google.com/file/d/1WgaOQotZgx_w05S3VkGrbEtuk-GBTPdL/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Function: Expressing Addition and Concession",
+    pdf: "https://drive.google.com/file/d/1cRRxBVNZIaNhrHd3YzWhxZoOFfyNYIBW/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Grammar:The Passive Voice",
+    pdf: "https://drive.google.com/file/d/17YaXniAAPhmFLjzU85AWCugW3415QNGA/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Reading Comprehension: Women and Power",
+    pdf: "https://drive.google.com/file/d/12dQBuGptK9dt__BROHXgwGkx5VGrc9dA/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Writing: A Book Review",
+    pdf: "https://drive.google.com/file/d/1S2zK3zgi4rP6ZeCFZEAMtZXyKAud99zD/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+    {
+    title: "Vocabulary: Cultural Values (definitions, antonyms, collocations)",
+    pdf: "https://drive.google.com/file/d/1ZmW_D5oH4jTvPL6wlansuoLT181fTIKx/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Function: Complaining + Making & Accepting Apologies",
+    pdf: "https://drive.google.com/file/d/1IW8iutYE6sfKFKPI-CLlXEJcr90MV3WL/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Grammar: Phrasal Verbs",
+    pdf: "https://drive.google.com/file/d/1JNAFBqyL6VUytV-SaxhO3Kp8YshEJXhk/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Reading Comprehension: Cultural Values",
+    pdf: "https://drive.google.com/file/d/1dFtHJw_7xPquhwmtFFnLfuN3AaF-xn3s/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Writing: The Informal Letter (The Personal Letter)",
+    pdf: "https://drive.google.com/file/d/1RkhmNavj4_c5pnoMLSg2x9_BcnoqqXBH/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Vocabulary: Citizenship (definitions, collocations)",
+    pdf: "https://drive.google.com/file/d/1y0mifrLabg9QbnAyBN25FuALawk3qEE5/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Function: Asking for and Giving Advice",
+    pdf: "https://drive.google.com/file/d/1lxhni5HTsDgv3AFwwNK-ACGkD7ZVfRts/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Grammar: Reported Speech",
+    pdf: "https://drive.google.com/file/d/17Ih-M5Y-p4NIUGu_E0Z1G9GhL1dkT2eJ/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Reading Comprehension: Citizenship",
+    pdf: "https://drive.google.com/file/d/1S8hT53OHmolpAd-ybnJAeadWCnBbPqTH/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Writing: Application Form",
+    pdf: "https://drive.google.com/file/d/1TF3M4PQx-MRko9L2rmEPM9pBu-z2tt4c/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Vocabulary: International Organizations (Acronyms, Concerns & Jargon)",
+    pdf: "https://drive.google.com/file/d/1hqCL9zZc6RYLg5AoK694CbRB2CNDsG9L/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Function: Responding to Good News & Bad News",
+    pdf: "https://drive.google.com/file/d/1KKI_1_ZfNa1w8GLzWCIwEkjWilNsM7Bu/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Grammar: Linking Words",
+    pdf: "https://drive.google.com/file/d/18NN7PY7Edj5UwKJL2zdo7WqoYJTHzWKl/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+      {
+    title: "Reading Comprehension: International Organizations",
+    pdf: "https://drive.google.com/file/d/1wcflraRTioXMtZiKuOdfO7W73qdWeFkv/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Writing #1: A short essay about an NGO",
+    pdf: "/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Writing #2: A formal email to the UN about causes and effects of a social problem.",
+    pdf: "/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Vocabulary: Science & Technology (branches, gadgets & collocations)",
+    pdf: "https://drive.google.com/file/d/1oHEA39UQTqocR2jMmi0XZMaP-loWqXLt/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Function: Expressing Certainty & Uncertainty",
+    pdf: "https://drive.google.com/file/d/1dmGLxbEk2vfiij2hzrKCOkNVpjwY2XLP/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Grammar: Review of Conditional Type 2",
+    pdf: "https://drive.google.com/file/d/1FcmLpmV4UScD-m3IU7tAi8NRpCx6bU2g/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Grammar: Conditional Type 3",
+    pdf: "https://drive.google.com/file/d/1upjMJmQsOVpA7GUeFdOooI7Va3vPymYl/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Reading Comprehension: Science & Technology",
+    pdf: "https://drive.google.com/file/d/1qYNkE6lFIEaJjNpP7hvX0_AnBVVDgrqr/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Writing: An essay about advantages and disadvantages",
+    pdf: "https://drive.google.com/file/d/1sZugRM9wSO64K9wgS7pI2v59jpTjYTot/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Vocabulary: Brain Drain (definition, collocations, antonyms)",
+    pdf: "https://drive.google.com/file/d/1WbephDNJ5SDe6mABLcBI8f5ekt9bEuQy/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Word Formation: Prefixes",
+    pdf: "https://drive.google.com/file/d/1Y0XBh2YsHtzkOJ6yDoktnEWD-6O-EPyZ/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Function: Expressing regret about past events",
+    pdf: "https://drive.google.com/file/d/1yV41CgBUqDMvQWPeOnVcCWSuDjgzQkpI/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Grammar: Restrictive (Defining) Vs Non-restrictive (Non-Defining) Relative Clause",
+    pdf: "https://drive.google.com/file/d/1pL5PbhM0q_0CgMY3i7Oo7fwTgE1CYJzg/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Reading Comprehension: Brain Drain",
+    pdf: "https://drive.google.com/file/d/1UPtyWBCeTwSMy8rudAYt99bVv3aYUo0s/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+        {
+    title: "Writing: Review (Paragraph vs Essay)",
+    pdf: "https://drive.google.com/file/d/1EX0Vq9UntsLrHN_YWoMa-PGyLmyOF7rJ/preview",
+    summary: EXAMPLE_PDF,
+    video: EXAMPLE_VIDEO,
+    series: EXAMPLE_PDF
+  },
+
 ];
 
 // ╔═══════════════════════════════════════════════════════════════════╗
