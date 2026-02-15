@@ -142,6 +142,7 @@ const mathLessonData: SimpleLesson[] = [
     exam: "https://drive.google.com/file/d/.../view",       // 📊 ضع رابط PDF للامتحان هنا
     assignment: "https://drive.google.com/file/d/.../view"  // 📌 ضع رابط PDF للفرض هنا
   },
+
   {
     title: "Dérivabilité d'une fonction",
     pdf: "https://drive.google.com/file/d/1LgSgEawVDDCg-XPnh0Ogiu-_W_j2Mbzn/preview",           // 👈 استبدل EXAMPLE_PDF برابطك
@@ -182,7 +183,7 @@ const mathLessonData: SimpleLesson[] = [
     title: "Nombres complexes",
     pdf:  "https://drive.google.com/file/d/1FovBZmMxi96M87xTJpFALwZZTmegWXwJ/preview",
     summary: EXAMPLE_PDF,
-    video: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    video: "https://www.youtube.com/watch?v=G0nr_Sn1wGQ"
   },
   {
     title: "Fonction exponentielles",
@@ -227,22 +228,28 @@ const mathLessonData: SimpleLesson[] = [
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 const physiqueLessonData: SimpleLesson[] = [
+
   {
     title: "Ondes progressives",
     pdf: "https://drive.google.com/file/d/1E6udRHky2p7PGyUdrzW93LPtDNv0f8kK/preview",
     summary: EXAMPLE_PDF,
-    video: EXAMPLE_VIDEO,
+    video: "https://www.youtube.com/watch?v=YCzE0EZvsC8",
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+  
   {
     title: "Ondes périodiques",
     pdf: "https://drive.google.com/file/d/1e6k2SDjUXIArcoFrbbYdc6O5umNWgKE_/preview",
     summary: EXAMPLE_PDF,
-    video: EXAMPLE_VIDEO,
+    video: "https://www.youtube.com/watch?v=b8FsxkXBK9g&t",
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+  {
+  title: "Ondes périodiques part 2",
+  video: "EXAMPLE_VIDEO",
+},
   {
     title: " Propagation d'une onde lumineuse",
     pdf: "https://drive.google.com/file/d/1M8EKBiY95xzmqgexHC0hVH5Ki2cRpW4Z/preview",
@@ -251,6 +258,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+    {
+  title: "Propagation d'une onde lumineuse part 2",
+  video: "EXAMPLE_VIDEO",
+},
   {
     title: " Décroissance radioactive",
     pdf: "https://drive.google.com/file/d/1hhnySETCQhVknCYfzmJymPrKp2X7e0LV/preview",
@@ -259,6 +270,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+      {
+  title: "Décroissance radioactive part 2",
+  video: "EXAMPLE_VIDEO",
+},
   {
     title: "Noyau , énergie et masse",
     pdf: "https://drive.google.com/file/d/1jPgwF2ygzS8H7broatopB3da3z9tNjeI/preview",
@@ -267,6 +282,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+        {
+  title: "Noyau , énergie et masse part 2",
+  video: "EXAMPLE_VIDEO",
+},
   {
     title: " Dipôle RC",
     pdf: "https://drive.google.com/file/d/1sVJ4hq6K_k-iGfiTCHZ4Jxa6T3kyQglR/preview",
@@ -275,6 +294,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: " Dipôle RC part 2",
+  video: "EXAMPLE_VIDEO",
+},
   {
     title: "Dipôle RL",
     pdf: "https://drive.google.com/file/d/1Ur2a4xqnBwGd5sVhUmnnAVzqD5Jvzsz2/preview",
@@ -283,6 +306,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Dipôle RL part 2",
+  video: "EXAMPLE_VIDEO",
+},
   {
     title: " Oscillation libre dans RLC en série",
     pdf: "https://drive.google.com/file/d/16J4MvcozgmefRSZ3aYwH171vh_6w4PAS/preview",
@@ -291,6 +318,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Oscillation libre dans RLC en série part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: " Circuit (R,L,C)en série en régime forcé",
     pdf: "https://drive.google.com/file/d/1x_rshgMXQF7eMzYahgpsIbBWIgf1-4En/preview",
@@ -298,7 +329,11 @@ const physiqueLessonData: SimpleLesson[] = [
     video: EXAMPLE_VIDEO,
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
-  },
+  },      
+    {
+  title: "Circuit (R,L,C)en série en régime forcé part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: " Ondes électromagnétique",
     pdf: "https://drive.google.com/file/d/15Xg5UGuprLdRzV6-8Vynu_ckBsYmwRK7/preview",
@@ -307,6 +342,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Ondes électromagnétique part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: " Modulation d'amplitude",
     pdf: "https://drive.google.com/file/d/1qIqtkW33bW13ke3PBcbfLNC_-3-kaxis/preview",
@@ -315,6 +354,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: " Modulation d'amplitude part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: "les lois de Newton",
     pdf: "https://drive.google.com/file/d/1tW8iisqzfwowyt99gUxGrtnH9WtsdA4f/preview",
@@ -323,6 +366,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "les lois de Newton part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: "La chute verticale d’un solide",
     pdf: "https://drive.google.com/file/d/1B_hkmDrHZZD8EVH2P5Lmfjqv7dtiVnKS/preview",
@@ -331,6 +378,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "La chute verticale d’un solide part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: "Les mouvements plans",
     pdf: "https://drive.google.com/file/d/1coTzJgRNSxQuIFm-SEkvFgxs8omlBcr0/preview",
@@ -339,6 +390,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Les mouvements plans part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: " Mouvement des satellites et des planètes",
     pdf: "https://drive.google.com/file/d/1TJzUoF45Zz1SIGkXNZkBczYLFCWkxN2Q/preview",
@@ -347,6 +402,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Mouvement des satellites et des planètes part 2",
+  video: "EXAMPLE_VIDEO",
+},
     {
     title: " Mouvement de rotation d’un solide autour d’un axe fixe",
     pdf: "https://drive.google.com/file/d/1CUWnKbFPcjT5FLJRdIzfuAYTfzP9_TAv/preview",
@@ -355,6 +414,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Mouvement de rotation d’un solide autour d’un axe fixe part 2",
+  video: "EXAMPLE_VIDEO",
+},
       {
     title: "Système mécanique oscillant",
     pdf: "https://drive.google.com/file/d/1MUYpkhjAnd_LdCU8eFY9roOY2vE7IgbP/preview",
@@ -363,6 +426,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Système mécanique oscillan part 2",
+  video: "EXAMPLE_VIDEO",
+},
       {
     title: "Aspects énergétiques",
     pdf: "https://drive.google.com/file/d/1J1iWRtRZaFigoadHRvjeUAdF0NIxwI_r/preview",
@@ -371,6 +438,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
+          {
+  title: "Aspects énergétiques part 2",
+  video: "EXAMPLE_VIDEO",
+},
       {
     title: "L’atome et la mécanique de Newton",
     pdf: "https://drive.google.com/file/d/1c8PRxtrh2KImaqlOwBjSuQHQ9BUhUvi4/preview",
@@ -379,7 +450,10 @@ const physiqueLessonData: SimpleLesson[] = [
     series: EXAMPLE_PDF,
     assignment: EXAMPLE_PDF,
   },
-  
+         {
+  title: "L’atome et la mécanique de Newton part 2",
+  video: "EXAMPLE_VIDEO",
+},
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // 🧬                      chimie
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -625,70 +699,70 @@ const frenchLessonData: SimpleLesson[] = [
 const philoLessonData: SimpleLesson[] = [
   {
     title: "الشخص والهوية",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1fwr-adaCohWf9NleavuMAvqxLnWzbmSx/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "الشخص بوصفه قيمة",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1doJdJdSwprBZti8fBKRbUZhrF_Ti8C8a/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     exam: EXAMPLE_PDF
   },
   {
     title: "الشخص بين ضرورة و الحرية",
-     pdf: EXAMPLE_PDF,
+     pdf: "https://drive.google.com/file/d/1hwfjbdi8VjAOyRkj9HX3AlKiamQESx1L/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "وجود الغير",
-     pdf: EXAMPLE_PDF,
+     pdf: "https://drive.google.com/file/d/1RWej-33gjwaBdzpcp__3Phj5x06wzwV0/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "معرفة الغير",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1-1W0q4mL9HNs_KZzYUGqpD2UCuSp6ul6/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "العلاقة مع الغير",
-    pdf: EXAMPLE_PDF,
+    pdf: "/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "التجربة و التجريب",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1qKK8mQUSOipo19rf4fN9xwS4MiwWGyWC/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
     {
     title: "العقلانية العلمية",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1fcur2jkyeMuo-wOOWVo4o17QbETQY-IW/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "معايير العلمية نضرية العلمية",
-    pdf: EXAMPLE_PDF,
+    pdf: "https://drive.google.com/file/d/1Prbeww2H_kBMf3HeB2Of1wVc6ePz02V0/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "الحقيقة و الرأي",
-    pdf: EXAMPLE_PDF,
+    pdf: "/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
