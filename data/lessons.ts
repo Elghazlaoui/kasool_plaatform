@@ -734,14 +734,14 @@ const philoLessonData: SimpleLesson[] = [
   },
   {
     title: "العلاقة مع الغير",
-    pdf: "/preview",
+    pdf: "https://drive.google.com/file/d/1qKK8mQUSOipo19rf4fN9xwS4MiwWGyWC/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
   },
   {
     title: "التجربة و التجريب",
-    pdf: "https://drive.google.com/file/d/1qKK8mQUSOipo19rf4fN9xwS4MiwWGyWC/preview",
+    pdf: "https://drive.google.com/file/d/1t30Kashx5HcrRYrg7ib_WugOHd-phrhk/preview",
     summary: EXAMPLE_PDF,
     video: EXAMPLE_VIDEO,
     assignment: EXAMPLE_PDF
